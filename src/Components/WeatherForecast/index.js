@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherItem from "./WeatherItem";
-import Link from "antd/es/typography/Link";
 
 const WeatherForecast = ({ forecastData }) => {
   console.log(forecastData);
