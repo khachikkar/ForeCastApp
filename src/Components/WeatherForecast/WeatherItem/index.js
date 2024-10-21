@@ -20,7 +20,7 @@ console.log(currentDate);
 const WeatherItem = ({item, isslice}) => {
 
 
-    const today = currentDate  ==  item.dt_txt.split(" ")[0]
+    const today = currentDate  ===  item.dt_txt.split(" ")[0]
     console.log(today)
 
   return (
