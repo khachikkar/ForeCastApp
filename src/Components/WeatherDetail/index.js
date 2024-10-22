@@ -21,10 +21,20 @@ const findata = showData.filter((item)=> item.dt_txt.split(" ")[0] === showData[
 
 
   return (
+    <div>
+      <h1>Weather Detail</h1>
+      <h2>
+      {
+        showData[0].dt_txt.split(" ")[0]
+      }
+      </h2>
     <div className='details'>
+    
+      
     {
         findata.map((item, i)=>  <WeatherItem key={i} item={item} isslice={false}/>)
     }
+    </div>
     </div>
   )
 }
