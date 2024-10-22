@@ -53,7 +53,7 @@ const WeatherItem = ({item, isslice}) => {
 <div className='tempInfo'>
 
     <div className='temp'>
-        <p className='tm'>{Math.floor(item.main.temp)} °C</p>
+        <p className='tm'>{Math.floor(item.main.temp_max)} °C</p>
         <p className='fl'>{Math.floor(item.main.feels_like)} °C</p>
     </div>
 
