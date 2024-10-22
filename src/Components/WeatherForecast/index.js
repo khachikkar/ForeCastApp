@@ -11,12 +11,12 @@ const WeatherForecast = ({ forecastData }) => {
   let showArr = [firstItem, sixteenthItem, thirtySecondItem];
 
   return (
-    <div>
+    <div className="forecastCont">
       <h2>
         Weather Forecast for {forecastData.city.name},{" "}
         {forecastData.city.country}
       </h2>
-      <div>
+      <div  className="weatherForecast">
         {showArr.map((item, i) => (
 
           <WeatherItem key={i} item={item} isslice={true}/>

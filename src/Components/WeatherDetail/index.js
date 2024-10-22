@@ -17,10 +17,13 @@ const showData = forecastData.list.slice(dat, dat + 8)
 console.log(showData, ">>>>")
 
 
+const findata = showData.filter((item)=> item.dt_txt.split(" ")[0] === showData[0].dt_txt.split(" ")[0] )
+
+
   return (
-    <div>
+    <div className='details'>
     {
-        showData.map((item, i)=>  <WeatherItem key={i} item={item} isslice={false}/>)
+        findata.map((item, i)=>  <WeatherItem key={i} item={item} isslice={false}/>)
     }
     </div>
   )

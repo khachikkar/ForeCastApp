@@ -1,4 +1,5 @@
-import './App.css';
+// import './App.css';
+import "./styles/global.css"
 import WeatherForecast from './Components/WeatherForecast';
 import { useEffect, useState } from 'react';
 
