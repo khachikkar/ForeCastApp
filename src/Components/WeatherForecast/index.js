@@ -7,8 +7,11 @@ const WeatherForecast = ({ forecastData }) => {
   const firstItem = forecastData.list[0];
   const sixteenthItem = forecastData.list[8];
   const thirtySecondItem = forecastData.list[16];
+  const twentyfour = forecastData.list[24];
+  const thirthytwo = forecastData.list[32];
 
-  let showArr = [firstItem, sixteenthItem, thirtySecondItem];
+
+  let showArr = [firstItem, sixteenthItem, thirtySecondItem, twentyfour, thirthytwo];
 
   return (
     <div className="forecastCont">

@@ -23,11 +23,15 @@ function App() {
 
 const [data, setData] = useState(null)
 
+
+// to fix data rerenderind and loose of data i must localstorage data and fetch after every 24 hour so
+// must fixed code  in 00:00 - 03:00
+
 useEffect(()=>{
   fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`)
   .then(response => response.json())
   .then(data => {
-    // console.log(data);
+    console.log(data);
    setData(data)
   })
   .catch(error => {
