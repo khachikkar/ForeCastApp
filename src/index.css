@@ -6,3 +6,22 @@
   text-decoration: none;
   color: black;
 }
+
+:root{
+  --gap-middleCont: 100px;
+  --item-BorderRadius: 10px;
+  --item-Padding: 10px;
+  --item-Margin: 10px;
+  --gap-small: 10px;
+  --gap-m:20px;
+  --Big-fontSize:16px;
+  --Extra-fontSize:20px;
+  --font-fWeight: 500;
+  --black-color: black;
+  --white-color:white;
+  --gray-color:gray;
+  --Button-color: #4caf50;
+  --ButtonHover-color: #3e8e41;
+
+
+}
