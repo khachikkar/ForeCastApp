@@ -98,6 +98,12 @@
   }
 }
 
+
+.mm{
+  border-radius: var(--item-BorderRadius);
+}
+
+
 @media screen and (max-width: 500px) {
   .weatherForecast {
     display: flex;

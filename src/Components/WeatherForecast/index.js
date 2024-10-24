@@ -27,6 +27,8 @@ const WeatherForecast = ({ forecastData }) => {
            
         ))}
       </div>
+     <img className="mm" src='https://i.pinimg.com/originals/3d/1c/e3/3d1ce3fb1985505ba88e01e525a8f841.gif' alt='cd'/>
+
     </div>
   );
 };

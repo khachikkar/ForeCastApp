@@ -25,7 +25,7 @@ console.log(findata, ">>>>")
       <h1>Weather Detail</h1>
       <h2>
       {
-        // showData[0].dt_txt.split(" ")[0]
+        showData[0].dt_txt.split(" ")[0]
       }
       </h2>
     <div className='details'>
