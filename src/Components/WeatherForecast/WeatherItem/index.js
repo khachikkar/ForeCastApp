@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { motion } from 'framer-motion';
 
 function getCurrentDate() {
     const today = new Date(); // Get the current date
@@ -48,7 +48,21 @@ const WeatherItem = ({item, isslice}) => {
 <div className='item' key={item.dt} style={{ border: today ? '2px solid #000' : '1px solid #ccc' }}>
     <h4>{isslice ? getWeekdayFromDate(item.dt_txt.split(" ")[0])  : item.dt_txt.split(" ")[1].slice(0,5) }</h4>
     {/* <h4>{currentDay}</h4> */}
-    <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt='ll' />
+
+    <motion.img 
+    src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} 
+    alt='weather-icon'
+    animate={{ y: [0, -20, 0] }} // Move up by 20px, then back down to 0
+    transition={{ 
+      duration: 2, // Total time for one full up and down cycle
+      repeat: Infinity, // Loop animation infinitely
+      ease: "easeInOut" // Smooth easing
+    }}
+  />
+
+
+
+    {/* <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt='ll' /> */}
     
 <div className='tempInfo'>
 
