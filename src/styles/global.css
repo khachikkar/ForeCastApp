@@ -103,6 +103,10 @@
   border-radius: var(--item-BorderRadius);
 }
 
+.logo{
+  width: 100px;
+
+}
 
 @media screen and (max-width: 500px) {
   .weatherForecast {

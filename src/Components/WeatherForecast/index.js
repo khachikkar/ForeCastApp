@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherItem from "./WeatherItem";
+import  logo from "../../../src/img/logo.png"
 
 const WeatherForecast = ({ forecastData }) => {
   console.log(forecastData);
@@ -15,6 +16,7 @@ const WeatherForecast = ({ forecastData }) => {
 
   return (
     <div className="forecastCont">
+      <img className="logo" src={logo} alt="kk"  />
       <h2>
         Weather Forecast for {forecastData.city.name},{" "}
         {forecastData.city.country}
