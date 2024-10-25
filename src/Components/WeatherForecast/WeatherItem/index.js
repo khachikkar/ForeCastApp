@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
 
+import { FiSunrise } from "react-icons/fi";
+import { FiSunset } from "react-icons/fi";
+
 function getCurrentDate() {
     const today = new Date(); // Get the current date
     const year = today.getFullYear(); // Get the current year
@@ -30,12 +33,34 @@ function getWeekdayFromDate(dateString) {
 
 
 
-
-const WeatherItem = ({item, isslice}) => {
+const WeatherItem = ({item, isslice, sundata}) => {
 
 
     const today = currentDate  ===  item.dt_txt.split(" ")[0]
     console.log(today)
+
+
+
+const headert = item.dt_txt.split(" ")[1] === "00:00:00"
+
+
+  const [sunrise, sunset] = sundata
+
+
+function getSunTimes(time){
+
+  let date = new Date(time * 1000); // Convert to milliseconds
+  
+  let hours = date.getHours().toString().padStart(2, '0');
+  let minutes = date.getMinutes().toString().padStart(2, '0');
+  
+  return `${hours}:${minutes}`;
+  
+  }
+
+
+
+
 
   return (
    
@@ -62,7 +87,6 @@ const WeatherItem = ({item, isslice}) => {
 
 
 
-    {/* <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt='ll' /> */}
     
 <div className='tempInfo'>
 
@@ -80,7 +104,19 @@ const WeatherItem = ({item, isslice}) => {
 <p>Wind Speed: {item.wind.speed} m/s</p>
 </div>
    
-   
+{ today && headert && <div className='sun'>
+  
+<div className='sunrise'>
+  <FiSunrise  size={16}/>
+  <p>Sunrise</p>
+  <p>{getSunTimes(sunrise)}</p>
+  </div>
+<div className='sunset'><FiSunset size={16} />
+<p>Sunset</p>
+<p>{getSunTimes(sunset)}</p>
+</div>
+  
+  </div>}
 
 </div>
 

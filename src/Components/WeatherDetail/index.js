@@ -15,6 +15,7 @@ console.log( dat)
 const showData = forecastData.list.slice(dat, dat + 8)
 
 
+const sundata = [forecastData.city.sunrise, forecastData.city.sunset ]
 
 
 const findata = showData.filter((item)=> item.dt_txt.split(" ")[0] === showData[0].dt_txt.split(" ")[0] )
@@ -32,7 +33,7 @@ console.log(findata, ">>>>")
     
       
     {
-        findata.map((item, i)=>  <WeatherItem key={i} item={item} isslice={false}/>)
+        findata.map((item, i)=>  <WeatherItem key={i} item={item} isslice={false} sundata={sundata}/>)
     }
     </div>
     </div>

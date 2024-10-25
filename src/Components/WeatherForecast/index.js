@@ -13,7 +13,7 @@ const WeatherForecast = ({ forecastData }) => {
 
 
   let showArr = [firstItem, sixteenthItem, thirtySecondItem, twentyfour, thirthytwo];
-
+const sundata = [forecastData.city.sunrise, forecastData.city.sunset ]
   return (
     <div className="forecastCont">
       <img className="logo" src={logo} alt="kk"  />
@@ -24,7 +24,7 @@ const WeatherForecast = ({ forecastData }) => {
       <div  className="weatherForecast">
         {showArr.map((item, i) => (
 
-          <WeatherItem key={i} item={item} isslice={true}/>
+          <WeatherItem key={i} item={item} isslice={true} sundata = {sundata}/>
 
            
         ))}
